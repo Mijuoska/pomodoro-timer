@@ -1,0 +1,46 @@
+
+        h1, h2 {
+            text-align: center!important;
+        }
+
+        .hidden {
+            display: none!important;
+        }
+
+        #min-zero {
+            display: inline
+        }
+
+         #sec-zero {
+            display: inline
+        }
+
+        #select {
+        margin: auto;
+        margin-top: 30px;
+        width: 25%;
+        }
+        
+        #timer-container {
+            text-align: center;
+        }
+
+        #timer-card {
+            display: inline-block;
+            margin-top: 30px;
+            width: 33%;
+        }
+
+        #timer {
+            margin: auto;
+            width: 90%;
+            font-size: 3rem;
+        }
+
+        #buttons {
+            margin: auto;
+            margin-top: 30px; 
+            margin-bottom: 30px;
+            text-align: center;
+
+        }
