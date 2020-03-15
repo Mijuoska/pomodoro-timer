@@ -25,7 +25,7 @@ function incrementTime() {
     document.getElementById('sec').innerHTML = sec++;
     if (sec > 10) {
         secZero.classList.add("hidden")
-    } if (sec == 11) {
+    } if (sec == 61) {
         sec = 0
         secZero.classList.remove("hidden")
         min++;
@@ -72,12 +72,11 @@ function breakSession() {
 
 
 function resetTimer(timer) {
-    minZero = document.querySelector('#min-zero')
     clearInterval(timer)
     document.getElementById('sec').innerHTML = sec = 0;
     document.getElementById('min').innerHTML = min = 0;
-    minZero.classList.remove('hidden')
-
+    minzero.classList.remove('hidden')
+    seczero.classList.remove('hidden')
 }
 
 
@@ -85,5 +84,7 @@ function resetTimerButton(timer) {
     clearInterval(timer)
     document.getElementById('sec').innerHTML = sec = 0;
     document.getElementById('min').innerHTML = min = 0;
+    minzero.classList.remove('hidden')
+    seczero.classList.remove('hidden')
     sessioncount = 0;
 }
