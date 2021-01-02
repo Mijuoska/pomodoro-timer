@@ -5,6 +5,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--stylesheets-->
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="assets/pomodoro.css" type="text/css">
 
@@ -15,6 +17,7 @@
     <title>Pomodoro Timer</title>
     </head>
     <body>
+
 
 <header class="w3-container w3-teal"><h1>Pomodoro Timer</h1></header>
 <div class="w3-container">
@@ -47,12 +50,22 @@
 </div>
 </div>
 </div>
+<div id="sessioncounter">
+<span>Sessions:</span>&nbsp;<span id="sessioncount">0</span>
+</div>
 
 <div class="w3-bar" id="buttons">
     <div style="display: inline-block">
 <button class="w3-btn w3-white w3-border w3-border-green w3-hover-green w3-round" id="start" onclick="runSession(workingSession)">Start timer</button>
 <button class="w3-btn w3-white w3-border w3-border-red w3-hover-red w3-round" id="stop" onclick="clearInterval(timer)">Stop Timer</button>
 <button class="w3-btn w3-white w3-border w3-border-blue w3-hover-blue w3-round" id="reset" onclick="resetTimerButton(timer)">Reset Timer</button>
+
+<audio id="audio">
+    <source src="ding.wav" type="audio/wav">
+    Your browser does not support the audio element.
+</audio>
+
+
 </div>
 </div>
 </div>

@@ -5,16 +5,7 @@ var seczero = document.getElementById("sec-zero")
 var minzero = document.getElementById("min-zero")
 var timer
 
-// Notification.requestPermission(function (permission) {
-//         // If the user accepts, let's create a notification
-//         if (permission === "granted") {
 
-// function Notify() {
-//     var text = "Time is up! Time for a break"
-//     var notification = new Notification("End work session", { body: text })
-// }
-//         }
-// });
 function runSession(session) {
     timer = setInterval(session, 1000)
 }
@@ -44,10 +35,7 @@ function workingSession() {
     var workinterval = Number(document.getElementById('work').value)
     incrementTime()
     if (min == workinterval) {
-        // var beep = new Pizzicato.Sound('./audio/beep.wav', function () { 
-        // beep.play();
-        // });
-        Notify()
+        playSound()
         resetTimer(timer)
         sessioncount++;
         document.getElementById('sessioncount').innerHTML = sessioncount;
@@ -64,6 +52,7 @@ function breakSession() {
     }
     incrementTime()
     if (min == breakinterval) {
+        playSound()
         resetTimer(timer)
         runSession(workingSession)
     }
@@ -88,3 +77,10 @@ function resetTimerButton(timer) {
     seczero.classList.remove('hidden')
     sessioncount = 0;
 }
+
+ function playSound() {
+ var audio = document.getElementById("audio");
+     audio.play();
+
+}
+ 
